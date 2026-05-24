@@ -8,6 +8,7 @@ load_dotenv()
 
 # ─── Page Config ─────────────────────────────────────────────────────────────
 st.set_page_config(
+    page_icon="📚",
     page_title="AI Study Buddy",
     page_icon="📚",
     layout="wide",
@@ -42,6 +43,23 @@ st.markdown("""
 .stApp {
     background: linear-gradient(135deg, #0a0a1a 0%, #0d1b2a 50%, #0a1628 100%);
     min-height: 100vh;
+}
+
+section.main > div {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    max-width: 100% !important;
+}
+
+[data-testid="stAppViewContainer"] {
+    padding: 0 !important;
+}
+
+[data-testid="block-container"] {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+    padding-top: 1rem !important;
+    max-width: 100% !important;
 }
 
 h1, h2, h3 { font-family: 'Lora', serif !important; color: #e8e0f5 !important; }
@@ -189,6 +207,16 @@ div[data-testid="stRadio"] label { color: #cbd5e1 !important; font-size: 0.95rem
 }
 
 hr { border-color: rgba(129,140,248,0.15) !important; }
+
+/* Hide Streamlit branding */
+#MainMenu { visibility: hidden !important; }
+footer { visibility: hidden !important; }
+header { visibility: hidden !important; }
+[data-testid="stToolbar"] { display: none !important; }
+[data-testid="manage-app-button"] { display: none !important; }
+.viewerBadge_container__1QSob { display: none !important; }
+.viewerBadge_link__1S137 { display: none !important; }
+button[kind="header"] { display: none !important; }
 
 .progress-info { color: #64748b; font-size: 0.85rem; text-align: right; margin-bottom: 0.5rem; }
 .q-number { color: #818cf8; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.3rem; }
