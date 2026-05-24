@@ -8,7 +8,6 @@ load_dotenv()
 
 # ─── Page Config ─────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_icon="📚",
     page_title="AI Study Buddy",
     page_icon="📚",
     layout="wide",
